@@ -4,6 +4,10 @@
 
 </br>
 
+Link del Sitio:https://gestion-test-it.netlify.app/
+
+</br>
+
 | Tecnologías | Versión |
 | ------------- | ------------- |
 | HTML |   5 |
@@ -23,3 +27,4 @@
 #### JS:        https://www.w3schools.com/js/default.asp
 #### Visual Studio Code:        https://code.visualstudio.com/download
 #### Netlify:          https://www.netlify.com/
+
