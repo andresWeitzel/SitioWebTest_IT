@@ -28,8 +28,11 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item ">
                             <a class="nav-link" href="../index.html">Inicio
-                  <span class="sr-only">(current)</span>
-                </a>
+                        <span class="sr-only">(current)</span>
+                        </a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#modalAyuda">Ayuda</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link " href="#">Material de Estudio</a>
@@ -46,6 +49,31 @@
             </div>
         </nav>
         <!-- Fin Navigation -->
+
+        <!--MODAL AYUDA(fuera del nav)-->
+        <div class="modal fade " id="modalAyuda" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-center">Ayuda</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                    </div>
+                    <div class="modal-body">
+                        Para comenazar algún Test, deberá seleccionar primeramente el área, dentro de estas, hay 4 posibles, programación, redes, seguridad informática y electrónica. Una vez seleccionada el área desde el botón "Elegir", se lo redireccionará a otra página donde
+                        podrás elegir los diferentes niveles de complejidad acorde al conocimiento que tengas, si necesitas repasar algún/os temas clickea el link "Material de Estudio" ubicado en la barra de navegación. </br>También
+                        podrás tomar algún/os cursos gratuitos online que el autor desarrolló o está desarrollando. :)
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--MODAL AYUDA-->
+
     </header>
     <!--FIN HEADER-->
 
@@ -66,7 +94,8 @@
             <div class="accordion mt-3 " id="seccionProgramacion">
                 <h2 class="text-white p-2"> PROGRAMACIÓN</h2>
 
-                <div class="card">
+                <!--CARD BASE DE DATOS-->
+                <div class="card ">
                     <div class="card-header" id="headingOne">
                         <h2 class="mb-0">
                             <button class="btn btn-link btn-block  collapsed text-info" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -94,26 +123,45 @@
                             Para visualizar otro contenido pausa el video!
                         </div>
                         <hr>
-                        <br>
-                        <br>
                     </div>
                 </div>
+                <!--FIN CARD BASE DE DATOS-->
+                <!--CARD POO-->
                 <div class="card">
-                    <div class="card-header" id="headingTwo">
+                    <div class="card-header" id="cardPOO">
                         <h2 class="mb-0">
-                            <button class="btn btn-link btn-block  collapsed text-info" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <button class="btn btn-link btn-block  collapsed text-info" type="button" data-toggle="collapse" data-target="#collapsePOO" aria-expanded="false" aria-controls="collapseTwo">
                                 <h4>Programación Orientada a Objetos</h4>
                       </button>
                         </h2>
                     </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#seccionProgramacion">
-                        <div class="card-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                            on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
-                            beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+                    <div id="collapsePOO" class="collapse" aria-labelledby="cardPOO" data-parent="#seccionProgramacion">
+                        <div class="card-body text-justify">
+                            La Programación Orientada a Objetos (POO, en español; OOP, según sus siglas en inglés) es un paradigma de programación que viene a innovar la forma de obtener resultados. Los objetos se utilizan como metáfora para emular las entidades reales del negocio
+                            a modelar.</br>
+                            Muchos de los objetos prediseñados de los lenguajes de programación actuales permiten la agrupación en bibliotecas o librerías, sin embargo, muchos de estos lenguajes permiten al usuario la creación de sus propias bibliotecas.</br>
+                            Está basada en varias técnicas del sexenio: herencia, cohesión, abstracción, polimorfismo, acoplamiento y encapsulamiento.
+                            </br>
+                            Su uso se popularizó a principios de la década de 1990. En la actualidad, existe una gran variedad de lenguajes de programación que soportan la orientación a objetos.
                         </div>
+                        <hr>
+
+                        <h5><span class="text-info">Para afianzar aún más el concepto, visualizá el siguiente video...</span></h5>
+
+
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Nka4JSBgf7I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="alert alert-info " role="alert">
+                            Para visualizar otro contenido pausa el video!
+                        </div>
+                        <hr>
                     </div>
                 </div>
+                <!--FIN CARD POO-->
+                <!-- CARD ESTRUCTURA DE DATOS-->
                 <div class="card">
                     <div class="card-header" id="headingThree">
                         <h2 class="mb-0">
@@ -130,6 +178,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- FIN CARD ESTRUCTURA DE DATOS-->
             </div>
             <!-- FIN COLLAPSE SECCION PROGRAMACION-->
 
