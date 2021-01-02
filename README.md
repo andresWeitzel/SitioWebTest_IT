@@ -84,7 +84,7 @@
 ### Usando los CDN de FullCalendar
 
 #### Maquetado
-* {link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.css'}
+* {link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.css'} (REEMPLAZAR LOS {} POR <> , YA QUE GITHUB NO PERMITE STYLESHEET EN SUS READMES)
 
 #### Funcionalidad
 *  <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.js'></script>
