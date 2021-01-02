@@ -81,7 +81,7 @@
 
 ## Uso de la Api de FullCalendar
 
-### Usando los CDN de FullCalendar
+### Usando los CDN de FullCalendar (Incorporar en la pagina deseada lo siguiente)
 
 #### Maquetado
 * {link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.css'} (REEMPLAZAR LOS {} POR <> , YA QUE GITHUB NO PERMITE STYLESHEET EN SUS READMES)
