@@ -81,18 +81,21 @@
 
 ## Uso de la Api de FullCalendar
 
+#### Contenedor en html para el calendario
+* <div id='calendar'></div>
+
 ### Usando los CDN de FullCalendar (Incorporar en la pagina deseada lo siguiente)
 
 #### Maquetado
-* {link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.css'} (REEMPLAZAR LOS {} POR <> , YA QUE GITHUB NO PERMITE STYLESHEET EN SUS READMES)
+* {link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.css'} ( REEMPLAZAR LOS {} POR <> , YA QUE GITHUB NO PERMITE STYLESHEET EN SUS READMES )
 
 #### Funcionalidad
 *  <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.js'></script>
 *  <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/locales-all.min.js'></script>
+*  <script type="text/javascript" src="../js/utilidades/calendario.js"></script> ( Nuestro Script JQuery para el consumo de la api )
 
-#### Script en JQuery para la implementacion de la Api de FullCalendar
-* <script type="text/javascript" src="../js/utilidades/calendario.js"></script>
-* calendario.js:
+
+#### Script en JQuery para la implementacion de la Api de FullCalendar ( calendario.js )
 ```
 document.addEventListener('DOMContentLoaded', function() {
 
