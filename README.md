@@ -84,7 +84,7 @@
 ### Usando los CDN de FullCalendar
 
 #### Maquetado
-*   <link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.css' />
+*  <link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.css' />
 
 #### Funcionalidad
 *  <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.js'></script>
@@ -92,7 +92,10 @@
 
 #### Script en JQuery para la implementacion de la Api de FullCalendar
 * <script type="text/javascript" src="../js/utilidades/calendario.js"></script>
-* document.addEventListener('DOMContentLoaded', function() {
+* calendario.js:
+```
+document.addEventListener('DOMContentLoaded', function() {
+
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -155,3 +158,5 @@
 
     calendar.render();
 });
+
+```
