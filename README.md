@@ -82,12 +82,12 @@
 ## Uso de la Api de FullCalendar
 
 #### Contenedor en html para el calendario
-* {div id='calendar'}{/div} ( REEMPLAZAR LOS {} POR <> , ya que github no permite algunos tags en sus readmes )
+* {div id='calendar'} {/div} ```( REEMPLAZAR LOS { } POR < > , ya que github no permite algunos tags en sus readmes )```
 
 ### Usando los CDN de FullCalendar ( Incorporar en la pagina deseada lo siguiente )
 
 #### Maquetado
-* {link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.css'} ( REEMPLAZAR LOS {} POR <> , ya que github no permite algunos tags en sus readmes )
+* {link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.css'} ```( REEMPLAZAR LOS { } POR < > , ya que github no permite algunos tags en sus readmes )```
 
 #### Funcionalidad
 *  <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.js'></script>
