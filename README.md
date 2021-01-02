@@ -34,9 +34,10 @@
 
 </br>
 
+<hr>
+
 ## Más Información
 
-<hr>
 
 ## Subir el proyecto al repo con git desde el bash de vs Code 
 
