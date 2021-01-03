@@ -83,7 +83,7 @@
 ## Uso de la Api de FullCalendar
 
 #### Contenedor en html para el calendario
-* {div id='calendar'} {/div} ```( REEMPLAZAR LOS { } POR < > , ya que github no permite algunos tags en sus readmes )```
+* {div id='calendar'} {/div} ```( REEMPLAZAR LOS { } POR < > , ya que github no permite algunos tags en sus readmes. También asegurate de darle margen para la correcta visualización del encabezado del calendario)```
 
 ### Usando los CDN de FullCalendar ( Incorporar en la pagina deseada lo siguiente )
 
