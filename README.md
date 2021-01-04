@@ -39,7 +39,7 @@
 ## Más Información
 
 
-## Subir el proyecto al repo con git desde el bash de vs Code 
+## Subir el proyecto al repositorio con git desde el bash de visual studio Code 
 
 ### 1)Inicializamos nuestro repositorio local .git
 * git init
@@ -60,7 +60,7 @@
 </br>
 
 
-## Actualización del proyecto con git desde el bash de vs code
+## Actualización del repositorio del proyecto con git desde el bash de visual studio code
 
 ### 1)Visualizamos las modificaciones realizadas en local
 * git status
@@ -96,7 +96,7 @@
 *  <script type="text/javascript" src="../js/utilidades/calendario.js"></script> ( Nuestro Script JQuery para el consumo de la api )
 
 
-#### Script en JQuery para la implementacion de la Api de FullCalendar ( calendario.js )
+#### Script base en JQuery para la implementacion de la Api de FullCalendar ( calendario.js )
 ```
 document.addEventListener('DOMContentLoaded', function() {
 
