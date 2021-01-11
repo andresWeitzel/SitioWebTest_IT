@@ -6,7 +6,16 @@
 
 **Link del Sitio: https://gestion-test-it.netlify.app/**
 
+
 </br>
+
+## Vista Inicio del Sitio Web
+
+![Index app](https://github.com/andresWeitzel/Graphics/blob/main/Proyectos/SitioTestIt/Captura%20de%20pantalla%20(319).png)
+
+</br>
+
+<hr>
 
 | Tecnologías | Versión |
 | ------------- | ------------- |
