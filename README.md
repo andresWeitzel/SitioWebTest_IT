@@ -6,7 +6,16 @@
 
 **Link del Sitio: https://gestion-test-it.netlify.app/**
 
+
 </br>
+
+## Vista Inicio del Sitio Web
+
+![Index app](https://github.com/andresWeitzel/Graphics/blob/main/Proyectos/SitioTestIt/Captura%20de%20pantalla%20(319).png)
+
+</br>
+
+<hr>
 
 | Tecnologías | Versión |
 | ------------- | ------------- |
@@ -39,43 +48,43 @@
 ## Más Información
 
 
-## Subir el proyecto al repo con git desde el bash de vs Code 
+## Subir el proyecto al repositorio con git desde el bash de visual studio Code 
 
-### 1)Inicializamos nuestro repositorio local .git
+#### 1)Inicializamos nuestro repositorio local .git
 * git init
 
-### 2)Agregamos lo desarrollado a nuestro repo local
-* git add .
+#### 2)Agregamos lo desarrollado a nuestro repo local
+* git add *
 
-### 3)Agregamos lo que tenemos en nuestro repo local al área de Trabajo.
-* git commit -m "agrega un comentario sin comillas"
+#### 3)Agregamos lo que tenemos en nuestro repo local al área de Trabajo.
+* git commit -m "agrega un comentario entre comillas"
 
-### 4)Le indicamos a git donde se va a almacenar nuestro proyecto(fijate en tu repositorio de github cual es el enlace de tu proyecto(esta en code)).
+#### 4)Le indicamos a git donde se va a almacenar nuestro proyecto(fijate en tu repositorio de github cual es el enlace de tu proyecto(esta en code)).
 * git remote add origin https://github.com/andresWeitzel/SitioWebTest_IT.git
 
-### 5)Subimos nuestro proyecto.
+#### 5)Subimos nuestro proyecto.
 * git push -u origin master
 
 
 </br>
 
 
-## Actualización del proyecto con git desde el bash de vs code
+## Actualización del repositorio del proyecto con git desde el bash de visual studio code
 
-### 1)Visualizamos las modificaciones realizadas en local
+#### 1)Visualizamos las modificaciones realizadas en local
 * git status
 
-### 2)Agregamos lo modificado al area de trabajo
+#### 2)Agregamos lo modificado al area de trabajo
 * git add *
 
-### 3)Confirmamos las modificaciones realizadas
-* git commit
+#### 3)Confirmamos las modificaciones realizadas
+* git commit -m "tu commit entre comillas"
 
-### 4)Sincronizamos y traemos todos los cambios del repositorio remoto a la rama en la que estemos trabajando actualmente.
+#### 4)Sincronizamos y traemos todos los cambios del repositorio remoto a la rama en la que estemos trabajando actualmente.
 ##### (Desconozco porqué tengo que ejecutar este comando, supongo que será porque en el local tengo otros proyectos o porque mi master no es un branch, sino el main por defecto de gitHub(Yo realicé esa modificación para mejor visualización)).
 * git pull https://github.com/andresWeitzel/SitioWebTest_IT.git
 
-### 5)Enviamos todos los cambios al repo en github
+#### 5)Enviamos todos los cambios al repo en github
 * git push https://github.com/andresWeitzel/SitioWebTest_IT.git
 
 </br>
@@ -96,7 +105,7 @@
 *  <script type="text/javascript" src="../js/utilidades/calendario.js"></script> ( Nuestro Script JQuery para el consumo de la api )
 
 
-#### Script en JQuery para la implementacion de la Api de FullCalendar ( calendario.js )
+#### Script base en JQuery para la implementacion de la Api de FullCalendar ( calendario.js )
 ```
 document.addEventListener('DOMContentLoaded', function() {
 
