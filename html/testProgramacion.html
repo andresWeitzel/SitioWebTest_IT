@@ -73,7 +73,7 @@
             <!--MODAL TEST BÁSICO-->
             <div class="m-4 p-2">
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-info " data-toggle="modal" data-target="#exampleModalTestBasicoProgramacion">
+                <button onclick="contadorTest()" type="button" class="btn btn-info " data-toggle="modal" data-target="#exampleModalTestBasicoProgramacion">
                     <h2 class=""> <span class="badge badge-info">Test Básico</span></h2>
                  </button>
 
@@ -91,6 +91,9 @@
                                 <div id="contenedorTestBasicoProgramacion" class="text-dark text-left m-2 p-2">
 
                                 </div>
+                                <h5>
+                                    <div id="contadorTestBasico" class="text-dark  m-2 p-2"></div>
+                                </h5>
                                 <!--FIN TEST BÁSICO-->
 
                             </div>
@@ -124,7 +127,7 @@
             <!--MODAL TEST MEDIO-->
             <div class="m-4 p-2">
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-info " data-toggle="modal" data-target="#exampleModal2">
+                <button onclick="contadorTest()" type="button" class="btn btn-info " data-toggle="modal" data-target="#exampleModal2">
                     <h2 class=""> <span class="badge badge-info"> Test Medio</span></h2>
                  </button>
 
@@ -140,8 +143,10 @@
 
                                 <!--TEST MEDIO-->
                                 <div id="contenedorTestMedioProgramacion" class="text-dark text-left m-2 p-2">
-
                                 </div>
+                                <h5>
+                                    <div id="contadorTestMedio" class="text-dark  m-2 p-2"></div>
+                                </h5>
                                 <!--FIN TEST MEDIO-->
 
                             </div>
@@ -172,7 +177,7 @@
             <!--MODAL TEST AVANZADO-->
             <div class="m-2 p-2">
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-info " data-toggle="modal" data-target="#exampleModal3">
+                <button onclick="contadorTest()" type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal3">
                     <h2 class=""> <span class="badge badge-info">Test Avanzado</span></h2>
                  </button>
 
@@ -188,8 +193,12 @@
 
                                 <!--TEST AVANZADO-->
                                 <div id="contenedorTestAvanzadoProgramacion" class="text-dark text-left m-2 p-2">
-
                                 </div>
+
+                                <h5>
+                                    <div id="contadorTestAvanzado" class="text-dark  m-2 p-2"></div>
+                                </h5>
+
                                 <!--FIN TEST AVANZADO-->
 
                             </div>
@@ -366,10 +375,15 @@
 
 
     <!--JS TEST DE PROGRAMACION-->
+
+    <script src="../js/testProgramacion/localStorage.js"></script>
+    <script src="../js/testProgramacion/preguntasTestBasicoProgramacion.js"></script>
+    <script src="../js/testProgramacion/preguntasTestMedioProgramacion.js"></script>
+    <script src="../js/testProgramacion/preguntasTestAvanzadoProgramacion.js"></script>
     <script src="../js/testProgramacion/testProgramacionBasico.js"></script>
     <script src="../js/testProgramacion/testProgramacionMedio.js"></script>
     <script src="../js/testProgramacion/testProgramacionAvanzado.js"></script>
-
+    <!--FIN JS TEST DE PROGRAMACION-->
 
 
 
