@@ -1,3 +1,5 @@
+var contadorTestParImpar = "par";
+
 function contadorTest() {
     if (typeof(Storage) !== "undefined") {
         if (localStorage.clickcount) {
@@ -13,6 +15,11 @@ function contadorTest() {
             document.getElementById("contadorTestBasico").innerHTML = "Has Iniciado los Test de Programación " + localStorage.clickcount + " veces.";
             document.getElementById("contadorTestMedio").innerHTML = "Has Iniciado los Test de Programación " + localStorage.clickcount + " veces.";
             document.getElementById("contadorTestAvanzado").innerHTML = "Has Iniciado los Test de Programación " + localStorage.clickcount + " veces.";
+        }
+        if (((localStorage.clickcount) % 2) == 0) {
+            contadorTestParImpar = "par";
+        } else {
+            contadorTestParImpar = "impar";
         }
     } else {
         document.getElementById("contadorTestBasico").innerHTML = "Lamentablemente no se puede contabilizar las veces que iniciaste este Test a causa de la version de tu navegador...";

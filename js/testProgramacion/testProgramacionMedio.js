@@ -9,16 +9,21 @@ function mostrarTestMedioProgramacion() {
 
     const arrayPreguntasRespuestas = [];
 
-    preguntasTestMedioProgramacion01.forEach((preguntaActual, nroPregunta) => {
+    //Si el contador del local Storage es par cargamos el primer test
+    if (contadorTestParImpar == 'par') {
 
-        //Accedemos a todas las respuestas
-        const respuestas = [];
+        preguntasTestMedioProgramacion01.forEach((preguntaActual, nroPregunta) => {
 
-        //
-        for (letraRespuesta in preguntaActual.respuestas) {
+            //Accedemos a todas las respuestas
+            const respuestas = [];
 
-            respuestas.push(
-                `
+            //
+            for (letraRespuesta in preguntaActual.respuestas) {
+
+                respuestas.push(
+
+
+                    `
                 <label>
                     
                     <input type="radio"  style="height:25px; width:25px; vertical-align: middle;" name="${nroPregunta}" value="${letraRespuesta}" >
@@ -31,13 +36,13 @@ function mostrarTestMedioProgramacion() {
                  <br><br>
         
                 `
-            );
+                );
 
-        }
-        //Por cada iteraccion se nos crea el div en donde se nos agrega la pregunta y respuestas
-        arrayPreguntasRespuestas.push(
+            }
+            //Por cada iteraccion se nos crea el div en donde se nos agrega la pregunta y respuestas
+            arrayPreguntasRespuestas.push(
 
-            `
+                `
             <strong>
             <div class="pregunta">
                 <h5>
@@ -56,11 +61,68 @@ function mostrarTestMedioProgramacion() {
         <hr>
         <br>
             `
-        );
-    });
 
+            );
+        });
+
+
+    } else {
+
+        preguntasTestMedioProgramacion02.forEach((preguntaActual, nroPregunta) => {
+
+            //Accedemos a todas las respuestas
+            const respuestas = [];
+
+            //
+            for (letraRespuesta in preguntaActual.respuestas) {
+
+                respuestas.push(
+
+                    `
+                <label>
+                    
+                    <input type="radio"  style="height:25px; width:25px; vertical-align: middle;" name="${nroPregunta}" value="${letraRespuesta}" >
+                   
+
+                        ${letraRespuesta} : ${preguntaActual.respuestas[letraRespuesta]}
+
+                 </label>
+
+                 <br><br>
+        
+                `
+
+                );
+
+            }
+            //Por cada iteraccion se nos crea el div en donde se nos agrega la pregunta y respuestas
+            arrayPreguntasRespuestas.push(
+
+                `
+            <strong>
+            <div class="pregunta">
+                <h5>
+                 ${preguntaActual.pregunta}
+                 </h5>
+            </div>
+        </strong>
+        <br>
+
+        <div class="respuestas">
+            <h6>
+            ${respuestas.join('')}
+            </h6>
+        </div>
+
+        <hr>
+        <br>
+            `
+
+            );
+        });
+
+    }
     contenedorTestMedioProgramacion.innerHTML = arrayPreguntasRespuestas.join('');
-
 }
 
 mostrarTestMedioProgramacion();
@@ -76,37 +138,74 @@ function mostrarResultadoTestMedioProgramacion() {
 
     let contadorRespuestasCorrectas = 0;
 
-    preguntasTestMedioProgramacion01.forEach((preguntaActual, nroPregunta) => {
+    //Si el contador del local Storage es par cargamos el primer test
+    if (contadorTestParImpar == 'par') {
 
-        //Acedemos a cada una de las respuestas
-        const totalRespuestas = respuestas[nroPregunta];
+        preguntasTestMedioProgramacion01.forEach((preguntaActual, nroPregunta) => {
 
-        //Cadena de texto que nos posibilita acceder a los input checkbox, con el checked comprobamos cual es la casilla marcada
-        const checkboxRespuestas = `input[name='${nroPregunta}']:checked`;
+            //Acedemos a cada una de las respuestas
+            const totalRespuestas = respuestas[nroPregunta];
 
-        //Comprobamos el valor de este input
-        // con la funcion logica OR (||) nos aseguramos de que no se haya seleccionado nada
-        const respuestaSeleccionado = (totalRespuestas.querySelector(checkboxRespuestas) || {}).value;
+            //Cadena de texto que nos posibilita acceder a los input checkbox, con el checked comprobamos cual es la casilla marcada
+            const checkboxRespuestas = `input[name='${nroPregunta}']:checked`;
 
-        //Si el usuario seleccionado la respuesta correcta aumenta el contador
-        if (respuestaSeleccionado === preguntaActual.solucion) {
+            //Comprobamos el valor de este input
+            // con la funcion logica OR (||) nos aseguramos de que no se haya seleccionado nada
+            const respuestaSeleccionado = (totalRespuestas.querySelector(checkboxRespuestas) || {}).value;
 
-            contadorRespuestasCorrectas++;
+            //Si el usuario seleccionado la respuesta correcta aumenta el contador
+            if (respuestaSeleccionado === preguntaActual.solucion) {
 
-            respuestas[nroPregunta].style.color = 'blue';
-        } else {
-            respuestas[nroPregunta].style.color = 'red';
+                contadorRespuestasCorrectas++;
 
-        }
+                respuestas[nroPregunta].style.color = 'blue';
+            } else {
+                respuestas[nroPregunta].style.color = 'red';
 
-    });
+            }
+            resultadoTestMedioProgramacion.innerHTML = 'Has acertado ' + contadorRespuestasCorrectas + '/' + preguntasTestMedioProgramacion01.length + ' respuestas correctas!! <br> (Encontrá las correctas)';
 
-    resultadoTestMedioProgramacion.innerHTML = 'Has acertado ' + contadorRespuestasCorrectas + '/' + preguntasTestMedioProgramacion01.length + ' respuestas correctas!! <br> (Encontrá las correctas)';
+            if (contadorRespuestasCorrectas === preguntasTestMedioProgramacion01.length) {
+                resultadoTestMedioProgramacion.innerHTML = 'GENIAL!! :) <br> ( Intentá realizar el Test Nivel Avanzado!! )';
 
-    if (contadorRespuestasCorrectas === preguntasTestMedioProgramacion.length) {
-        resultadoTestMedioProgramacion.innerHTML = 'GENIAL!! :) <br> ( Intentá realizar el Test Nivel Avanzado!! )';
+            }
 
+        });
+
+    } else {
+
+        preguntasTestMedioProgramacion02.forEach((preguntaActual, nroPregunta) => {
+
+            //Acedemos a cada una de las respuestas
+            const totalRespuestas = respuestas[nroPregunta];
+
+            //Cadena de texto que nos posibilita acceder a los input checkbox, con el checked comprobamos cual es la casilla marcada
+            const checkboxRespuestas = `input[name='${nroPregunta}']:checked`;
+
+            //Comprobamos el valor de este input
+            // con la funcion logica OR (||) nos aseguramos de que no se haya seleccionado nada
+            const respuestaSeleccionado = (totalRespuestas.querySelector(checkboxRespuestas) || {}).value;
+
+            //Si el usuario seleccionado la respuesta correcta aumenta el contador
+            if (respuestaSeleccionado === preguntaActual.solucion) {
+
+                contadorRespuestasCorrectas++;
+
+                respuestas[nroPregunta].style.color = 'blue';
+            } else {
+                respuestas[nroPregunta].style.color = 'red';
+
+            }
+            resultadoTestMedioProgramacion.innerHTML = 'Has acertado ' + contadorRespuestasCorrectas + '/' + preguntasTestMedioProgramacion02.length + ' respuestas correctas!! <br> (Encontrá las correctas)';
+
+            if (contadorRespuestasCorrectas === preguntasTestMedioProgramacion02.length) {
+                resultadoTestMedioProgramacion.innerHTML = 'GENIAL!! :) <br> ( Intentá realizar el Test Nivel Avanzado!! )';
+
+            }
+
+        });
     }
+
 }
 
 botonComprobarResultadoTestMedioProgramacion.addEventListener('click', mostrarResultadoTestMedioProgramacion);
@@ -124,29 +223,58 @@ function resetTestMedioProgramacion() {
     const respuestas = contenedorTestMedioProgramacion.querySelectorAll(".respuestas");
 
 
+    if (contadorTestParImpar == 'par') {
 
-    preguntasTestMedioProgramacion01.forEach((preguntaActual, nroPregunta) => {
+        preguntasTestMedioProgramacion01.forEach((preguntaActual, nroPregunta) => {
 
-        //Acedemos a cada una de las respuestas
-        const totalRespuestas = respuestas[nroPregunta];
+            //Acedemos a cada una de las respuestas
+            const totalRespuestas = respuestas[nroPregunta];
 
-        //Cadena de texto que nos posibilita acceder a los input checkbox, con el checked comprobamos cual es la casilla marcada
-        const checkboxRespuestas = `input[name='${nroPregunta}']:checked`;
+            //Cadena de texto que nos posibilita acceder a los input checkbox, con el checked comprobamos cual es la casilla marcada
+            const checkboxRespuestas = `input[name='${nroPregunta}']:checked`;
 
-        //Comprobamos el valor de este input
-        // con la funcion logica OR (||) nos aseguramos de que no se haya seleccionado nada
-        const respuestaSeleccionado = (totalRespuestas.querySelector(checkboxRespuestas) || {}).value;
+            //Comprobamos el valor de este input
+            // con la funcion logica OR (||) nos aseguramos de que no se haya seleccionado nada
+            const respuestaSeleccionado = (totalRespuestas.querySelector(checkboxRespuestas) || {}).value;
 
-        //Si el usuario seleccionado la respuesta correcta aumenta el contador
-        if (respuestaSeleccionado === preguntaActual.solucion) {
+            //Si el usuario seleccionado la respuesta correcta aumenta el contador
+            if (respuestaSeleccionado === preguntaActual.solucion) {
 
-            respuestas[nroPregunta].style.color = 'black';
-        } else {
-            respuestas[nroPregunta].style.color = 'black';
+                respuestas[nroPregunta].style.color = 'black';
+            } else {
+                respuestas[nroPregunta].style.color = 'black';
 
-        }
+            }
 
-    });
+        });
+
+    } else {
+
+
+        preguntasTestMedioProgramacion02.forEach((preguntaActual, nroPregunta) => {
+
+            //Acedemos a cada una de las respuestas
+            const totalRespuestas = respuestas[nroPregunta];
+
+            //Cadena de texto que nos posibilita acceder a los input checkbox, con el checked comprobamos cual es la casilla marcada
+            const checkboxRespuestas = `input[name='${nroPregunta}']:checked`;
+
+            //Comprobamos el valor de este input
+            // con la funcion logica OR (||) nos aseguramos de que no se haya seleccionado nada
+            const respuestaSeleccionado = (totalRespuestas.querySelector(checkboxRespuestas) || {}).value;
+
+            //Si el usuario seleccionado la respuesta correcta aumenta el contador
+            if (respuestaSeleccionado === preguntaActual.solucion) {
+
+                respuestas[nroPregunta].style.color = 'black';
+            } else {
+                respuestas[nroPregunta].style.color = 'black';
+
+            }
+
+        });
+
+    }
 
     resultadoTestMedioProgramacion.innerHTML = '';
 
