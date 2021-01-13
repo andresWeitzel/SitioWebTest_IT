@@ -4,14 +4,22 @@
 
 </br>
 
-**Link del Sitio: https://gestion-test-it.netlify.app/**
+### Link del Sitio: https://gestion-test-it.netlify.app/
 
 
 </br>
 
-## Vista Inicio del Sitio Web
+## Vista de Inicio del Sitio Web 1/3
 
 ![Index app](https://github.com/andresWeitzel/Graphics/blob/main/Proyectos/SitioTestIt/Captura%20de%20pantalla%20(319).png)
+
+## Vista de Inicio del Sitio Web 2/3
+
+![Index app](https://github.com/andresWeitzel/Graphics/blob/main/Proyectos/SitioTestIt/Captura%20de%20pantalla%20(324).png)
+
+## Vista de Inicio del Sitio Web 3/3
+
+![Index app](https://github.com/andresWeitzel/Graphics/blob/main/Proyectos/SitioTestIt/Captura%20de%20pantalla%20(325).png)
 
 </br>
 
