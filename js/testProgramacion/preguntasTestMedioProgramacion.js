@@ -64,7 +64,7 @@ const preguntasTestMedioProgramacion01 = [
 const preguntasTestMedioProgramacion02 = [
 
     {
-        pregunta: "1.Patrones de Comportamienta",
+        pregunta: "1.Patrones de Comportamiento",
 
         respuestas: {
             a: "Corresponden a patrones de diseño de software que solucionan problemas de creación de instancias. Nos ayudan a encapsular y abstraer dicha creación.",
