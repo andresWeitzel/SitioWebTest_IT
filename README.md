@@ -105,8 +105,11 @@
  ```<div id='calendar'></div> (También asegurate de darle margen para la correcta visualización del encabezado del calendario)```
 
 #### Usando los CDN de FullCalendar ( Incorporar en la pagina deseada lo siguiente )
+
 * Maquetado
-```<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.css'> ```
+```
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.css'> 
+```
 
 * Funcionalidad
 ```
