@@ -101,16 +101,19 @@
 
 ## Uso de la Api de FullCalendar
 
-#### Contenedor en html para el calendario
+#### Contenedor en html para el calendario (Incorporar en la página deseada)
  ```<div id='calendar'></div> (También asegurate de darle margen para la correcta visualización del encabezado del calendario)```
 
-#### Usando los CDN de FullCalendar ( Incorporar en la pagina deseada lo siguiente )
+#### Usando los CDN de FullCalendar ( Incorporar en la misma pagina donde se aplico el contenedor para el calendario lo siguiente )
 
 * Maquetado
 ```
 <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.css'> 
 ```
-
+* Themes de Full Calendar
+```
+<link href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.css' rel='stylesheet'>
+```
 * Funcionalidad
 ```
 <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.js'></script>
@@ -127,6 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
         initialDate: '2020-12-07',
+        themeSystem: 'bootstrap',
         headerToolbar: {
             left: 'prev,next today',
             center: 'title',
