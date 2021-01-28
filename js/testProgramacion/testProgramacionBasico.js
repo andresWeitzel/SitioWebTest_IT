@@ -3,6 +3,9 @@ const botonComprobarResultadoTestBasicoProgramacion = document.getElementById("b
 const botonSalirTestBasicoProgramacion = document.getElementById("botonSalirTestBasicoProgramacion");
 const resultadoTestBasicoProgramacion = document.getElementById("resultadoTestBasicoProgramacion");
 
+
+const setProgress = document.getElementById("progress01");
+
 //Creamos una funcion que nos inserte en el html estas preguntas
 
 function mostrarTestBasicoProgramacion() {
@@ -168,6 +171,18 @@ function mostrarResultadoTestBasicoProgramacion() {
 
             }
             resultadoTestBasicoProgramacion.innerHTML = 'Has acertado ' + contadorRespuestasCorrectas + '/' + preguntasTestBasicoProgramacion01.length + ' respuestas correctas!! <br> (Encontrá las correctas)';
+
+            if (contadorRespuestasCorrectas === 1) {
+
+                setProgress.innerHTML.style = "width: 20%";
+
+                setProgress.setAttribute("role", "progressbar");
+                setProgress.setAttribute("aria-valuenow", 20);
+                setProgress.setAttribute("aria-valuemin", 0);
+                setProgress.setAttribute("aria-valuemax", 100);
+            }
+
+
 
             if (contadorRespuestasCorrectas === preguntasTestBasicoProgramacion01.length) {
                 resultadoTestBasicoProgramacion.innerHTML = 'FELICITACIONES!! :) <br> ( Intentá realizar el Test Nivel Medio!! )';

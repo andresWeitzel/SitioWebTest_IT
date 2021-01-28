@@ -2,8 +2,12 @@ document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
+
         initialView: 'dayGridMonth',
         initialDate: '2020-12-07',
+
+        themeSystem: 'bootstrap',
+
         headerToolbar: {
             left: 'prev,next today',
             center: 'title',
@@ -11,53 +15,56 @@ document.addEventListener('DOMContentLoaded', function() {
         },
 
         events: [{
-                title: 'All Day Event',
-                start: '2020-12-01'
+                title: 'Se creo este proyecto',
+                start: '2020-12-22',
+
+
             },
             {
-                title: 'Long Event',
-                start: '2020-12-07',
-                end: '2020-12-10'
+                start: '2020-12-22',
+                overlap: false,
+                display: 'background',
+                color: '#7d93a6'
             },
             {
-                groupId: '999',
-                title: 'Repeating Event',
-                start: '2020-12-09T16:00:00'
+                title: 'Creación de contenido al Proyecto',
+                start: '2020-12-25',
+                end: '2020-12-28'
+            },
+
+            {
+                title: 'Ocurrencia de este Proyecto',
+                start: '2020-12-19T03:00:00',
+                end: '2020-12-19T03:30:00'
             },
             {
-                groupId: '999',
-                title: 'Repeating Event',
-                start: '2020-12-16T16:00:00'
+                title: 'Planificacion',
+                start: '2020-12-19T04:00:00'
             },
             {
-                title: 'Conference',
-                start: '2020-12-11',
-                end: '2020-12-13'
+                title: 'Link del repo',
+                url: 'https://github.com/andresWeitzel/SitioWebTest_IT',
+                start: '2020-12-29'
             },
             {
-                title: 'Meeting',
-                start: '2020-12-12T10:30:00',
-                end: '2020-12-12T12:30:00'
+                title: 'STAND BY',
+                start: '2020-12-31',
+                end: '2021-01-05'
             },
             {
-                title: 'Lunch',
-                start: '2020-12-12T12:00:00'
-            },
-            {
-                title: 'Meeting',
-                start: '2020-12-12T14:30:00'
-            },
-            {
-                title: 'Birthday Party',
-                start: '2020-12-13T07:00:00'
-            },
-            {
-                title: 'Click for Google',
-                url: 'http://google.com/',
-                start: '2020-12-28'
+                start: '2020-12-31',
+                end: '2021-01-05',
+                overlap: false,
+                display: 'background',
+                color: '#00ced1'
             }
         ]
     });
 
+    calendar.setOption('locale', 'es');
+
+
     calendar.render();
+
+
 });
