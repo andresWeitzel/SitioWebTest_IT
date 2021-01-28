@@ -102,18 +102,18 @@
 ## Uso de la Api de FullCalendar
 
 #### Contenedor en html para el calendario
-* {div id='calendar'} {/div} ```( REEMPLAZAR LOS { } POR < > , ya que github no permite algunos tags en sus readmes. También asegurate de darle margen para la correcta visualización del encabezado del calendario)```
+ ```<div id='calendar'></div> (También asegurate de darle margen para la correcta visualización del encabezado del calendario)```
 
-### Usando los CDN de FullCalendar ( Incorporar en la pagina deseada lo siguiente )
+#### Usando los CDN de FullCalendar ( Incorporar en la pagina deseada lo siguiente )
+* Maquetado
+```<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.css'> ```
 
-#### Maquetado
-* {link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.css'} ```( REEMPLAZAR LOS { } POR < > , ya que github no permite algunos tags en sus readmes )```
-
-#### Funcionalidad
-*  <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.js'></script>
-*  <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/locales-all.min.js'></script>
-*  <script type="text/javascript" src="../js/utilidades/calendario.js"></script> ( Nuestro Script JQuery para el consumo de la api )
-
+* Funcionalidad
+```
+<script type='text/javascript' src='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.js'></script>
+<script type='text/javascript' src='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/locales-all.min.js'></script>
+<script type="text/javascript" src="../js/utilidades/calendario.js"></script> ( Nuestro Script JQuery para el consumo de la api )
+```
 
 #### Script base en JQuery para la implementacion de la Api de FullCalendar ( calendario.js )
 ```
