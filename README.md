@@ -1,6 +1,6 @@
 # Sitio Web Test IT
 
-**Desarrollo y Diseño de un sitio web acerca de test en el área IT utilizando Bootstrap, JS Nativo y JQuery para consumo de la API de un Calendario.**
+**Desarrollo y Diseño de un sitio web acerca de Test en el Área IT utilizando Bootstrap, JS Nativo y consumo de la API FreeCalendar.**
 
 </br>
 
