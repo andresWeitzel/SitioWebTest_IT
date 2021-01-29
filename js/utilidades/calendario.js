@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         initialView: 'dayGridMonth',
         initialDate: '2020-12-07',
+        eventResizableFromStart: true,
+        //editable: true,
+        dayMaxEvents: true, // when too many events in a day, show the popover
 
         themeSystem: 'bootstrap',
 
@@ -57,11 +60,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 overlap: false,
                 display: 'background',
                 color: '#00ced1'
-            }
+            },
+            {
+                title: 'RETORNO',
+                start: '2021-01-05',
+            },
+            {
+                start: '2021-01-05',
+                overlap: false,
+                display: 'background',
+                color: '#0D4CB0'
+            },
+
         ]
     });
 
     calendar.setOption('locale', 'es');
+
 
 
     calendar.render();
